@@ -12,11 +12,10 @@ mongoose.connect(process.env.MONGO_URI)
     .catch(err => console.log("MongoDB error:", err));
 
 app.use(express.json());
-
-const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
     res.json({ message: "Online Bookstore API is running!" });
 });
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
