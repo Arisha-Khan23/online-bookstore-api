@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-const bookRoutes = require("./routes/bookRoutes");
+const bookRoutes = require("./routes/books");
 
 console.log("MONGO_URI:", process.env.MONGO_URI);
 
